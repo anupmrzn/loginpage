@@ -4,21 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_orange_light"
+    android:background="@android:color/holo_blue_light"
+
     tools:context="com.example.user.loginpage.MainActivity">
 
 
     <EditText
-        android:id="@+id/username"
-        android:layout_width="wrap_content"
+        android:id="@+id/user"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="172dp"
         android:ems="10"
+        android:hint="@string/hello"
         android:inputType="textPersonName"
-        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -27,14 +28,15 @@
         app:layout_constraintVertical_bias="0.045" />
 
     <EditText
-        android:id="@+id/password"
-        android:layout_width="wrap_content"
+        android:id="@+id/pass"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:ems="10"
+        android:hint="password"
         android:inputType="textPassword"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -44,47 +46,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.574" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="140dp"
-        android:layout_height="42dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Username"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.035"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.39" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="136dp"
-        android:layout_height="45dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Password"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.034"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.573"
-        tools:textColorLink="@android:color/background_dark" />
-
     <Button
-        android:id="@+id/login"
+        android:id="@+id/Lo"
         android:layout_width="153dp"
         android:layout_height="45dp"
         android:layout_marginBottom="8dp"
@@ -103,22 +66,13 @@
         tools:background="@android:color/holo_blue_dark" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="359dp"
-        android:layout_height="111dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="LOGIN DEMO"
-        android:textAlignment="center"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.037" />
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="welcome ^_^"
+        android:background="@android:color/holo_green_dark"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="31dp" />
+
 
 </android.support.constraint.ConstraintLayout>

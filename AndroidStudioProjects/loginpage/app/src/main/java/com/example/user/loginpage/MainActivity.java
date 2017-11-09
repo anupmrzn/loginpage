@@ -5,14 +5,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     EditText username;
     EditText password;
-    TextView textView;
-    TextView textView2;
-    TextView textView3;
+
+    private String etusername;
+    private String etpassword;
+
     Button login;
 
 
@@ -20,17 +21,44 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        username = (EditText)findViewById(R.id.username);
-        password = (EditText)findViewById(R.id.password);
-        login = (Button)findViewById(R.id.login);
-        login.setOnClickListener(View );
-        textView = (TextView)findViewById(R.id.textView);
-        textView2 = (TextView)findViewById(R.id.textView2);
-        textView3 = (TextView)findViewById(R.id,textView3);
-    }
-    public void setLogin(){
-        username = username.getText().toString().trim();
-        password = password.getText().toString().trim();
+        EditText editTextUserName = (EditText) findViewById(R.id.user);
+        etusername = editTextUserName.getText().toString();
+        EditText editTextPassword = (EditText)findViewById(R.id.pass);
+        etpassword = editTextPassword.getText().toString();
+        login = (Button) findViewById(R.id.Lo);
 
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setLogin();
+            }
+        });
+
+
+
+    }
+
+    public void setLogin() {
+        etusername = username.getText().toString().trim();
+        etpassword = password.getText().toString().trim();
+        if (!validate()){
+            Toast.makeText(this,"Invalid Name",Toast.LENGTH_SHORT).show();
+        }else{
+            onSignupSuccess();
+        }
+
+
+    }
+    public boolean validate(){
+        boolean valid = true;
+        if (etpassword.isEmpty() || etusername.isEmpty()) {
+            Toast.makeText(this, "Invalid Name", Toast.LENGTH_SHORT).show();
+            valid = false;
+        }
+        return valid;
+
+    }
+    public void onSignupSuccess(){
+        //TODO WHAT WILL GO AFTER SIGHNUP
     }
 }
